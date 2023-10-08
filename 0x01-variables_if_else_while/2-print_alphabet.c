@@ -3,17 +3,21 @@
 /**
  * main - prints the alphabet
  *
+ * Description: print all aplhabet letters
+ *
  * Return: Always 0 (success)
- */
+*/
+
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
-	
-	for (i = 0; i < 26; i++)
-        {
-		putchar(alp[i]);
+	char ch = 'a'
+
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
 	}
-        putchar('\n');
+	putchar('\n');
+
 	return (0);
 }
