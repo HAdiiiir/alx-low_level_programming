@@ -1,17 +1,31 @@
 #include <stdio>
 
 /**
- * main - prints the alphabet.
+ * main - Entry point
+ *
+ * Description: print alphabet in lowercase then in uppercase
  *
  * Return: Always 0 (success)
- */
+*/
 int main(void)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	int i;
-for (i = 0; i < 52; i++)
+	char ch = 'a';
+	char CH = 'A';
+
+	/*prints a - z*/
+	while (ch <= 'z')
 	{
-		putchar(alp[i]);
+		putchar(ch);
+		ch++;
 	}
-	puthar('\n')
+
+	/*print A -Z*/
+	while (CH <= 'Z')
+	{
+		putchar(CH);
+		CH++;
+	}
+	putchar('\n');
+
 	return (0);
+}
