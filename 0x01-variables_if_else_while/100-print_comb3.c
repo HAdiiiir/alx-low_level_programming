@@ -3,16 +3,20 @@
 #include <time.h>
 
 /**
- * main -  Entry point
+ * main -  print 2 digit combo
  *
  * Return: Always 0 (success)
 */
 
 int main(void)
 {
-	int d, p;
+int i = '0';
+int j;
 
-	for (d = '0'; d < '9'; p++)
-	{
-		for (p = d + 1; p <= '9'; p++)
-			
+while (i <= '9')
+{
+j = '0';
+while (j <= '9')
+{
+if (i < j)
+};	
