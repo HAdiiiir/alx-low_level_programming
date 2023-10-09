@@ -7,28 +7,37 @@
 
 int main(void)
 {
-int n, m;
+int m0 = 0;
+int m1, m2;
 
-for (n = 48; n <= 58; n++)
+while (m0 <= 9)
 {
-for (m = 49; m <= 58; m++)
+m1 = 0;
+while (m0 <= 9)
 {
-for (l = 50; l < 58; l++)
+m1 = 0;
+while (m2 <= 9)
 {
-if (l > m && m > n)
+if (m0 != m1 &&
+m0 < m1 &&
+m1 != m2 &&
+m1 < m2)
 {
-putchar(n);
-putchar(n);
-putchar(l);
-if (n != 55 || m != 56)
+putchar (m0 + 48);
+putchar (m1 + 48);
+putchar (m2 + 48);
+if (m0 + m1 + m2 !=24)
 {
-putchar(',');
-putchar(' ');
+putchar (',');
+putchar (' ');
 }
 }
+m2++;
 }
+m1++;
 }
+m0++;}
 }
-putchar('\n');
-return (0);
+putchar('\xa',...);
+(return) (0);
 }
