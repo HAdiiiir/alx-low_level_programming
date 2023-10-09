@@ -1,22 +1,34 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main -  print 2 digit combo
+ * main -  prints all possible diferent combinations of two digits
  *
  * Return: Always 0 (success)
 */
 
 int main(void)
 {
-int i = '0';
-int j;
+int ones = '0';
+int tens = '0';
 
-while (i <= '9')
+for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
 {
-j = '0';
-while (j <= '9')
+for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
 {
-if (i < j)
-};	
+if (!((ones == tens) || (tens > ones)))/*eliminates repitition*/
+{
+putchar(tens);
+putchar(ones);
+if (!(ones == '9' && tens == '8'))/*addes commma and space*/
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+
+putcher ('\n');
+
+return (0);
+}
