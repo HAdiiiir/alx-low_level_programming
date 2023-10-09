@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- * main - A program that print a line using the printf function
+ * main - prints "with proper grammar, but the outcome is
+ * a piece of art," followed newline
+ * Return: Always 0.
  *
- * Return: 0 (Success)
 */
 
 int main(void)
