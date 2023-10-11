@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_sign - entry point
- * @c: character
- * Description: return 1 if c is in lower case
- * Return: 1 or 0
+ * _islower - checks for lowercase character
+ * @c: The character to be checked
+ * Return: 1 for positive num, -1 for negative num or zero anything else
  */
+
 int print_sign(int c)
 {
 	if (c > 0)
