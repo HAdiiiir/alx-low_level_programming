@@ -1,34 +1,28 @@
 #include <stdio.h>
 
 /**
- * main -  prints all possible diferent combinations of two digits
+ * main - a simple program that outputs 0-9 separated by commas
  *
- * Return: Always 0 (success)
-*/
-
+ * Return: 0 on success
+ */
 int main(void)
 {
-int ones = '0';
-int tens = '0';
+	int i;
+	int j;
 
-for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
-{
-for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
-{
-if (!((ones == tens) || (tens > ones)))/*eliminates repitition*/
-{
-putchar(tens);
-putchar(ones);
-if (!(ones == '9' && tens == '8'))/*addes commma and space*/
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-
-putcher ('\n');
-
-return (0);
+	for (i = 48; i < 57; i++)
+	{
+		for (j = i + 1; j < 58; j++)
+		{
+			putchar(i);
+			putchar(j);
+			if (i != 56 || j != 57)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
