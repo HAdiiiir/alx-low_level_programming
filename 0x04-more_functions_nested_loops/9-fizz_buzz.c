@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - entry point
  *
- *Description: prints the number 1 - 100 w/
+ * Description: prints the number 1 - 100 w/
  * Fizz for multiples of 3, Buss for multiples of 5,
  * and FizzBuss for multiples of both
  *
@@ -18,20 +18,21 @@ for (i = 1; i <= 100; i++)
 {
 if (i % 15 == 0)
 {
-printf("FizzBuzz\n");
+printf("FizzBuzz");
 }
 else if (i % 3 == 0)
 {
-printf("Fizz\n");
+printf("Fizz");
 }
 else if (i % 5 == 0)
 {
-printf("Buzz\n");
+printf("Buzz");
 }
 else
-{
-printf("%u\n", i);
+printf("%i", i);
+if (i < 100)
+	printf(" ");
 }
-}
+printf("\n");
 return (0);
 }
