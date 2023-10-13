@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * isdigit - check of character is a digit
- * @x: The number to be chacked
- * Return: 1 for a character that will be a digit or 0 for any else
+ * isdigit - check of a digit
+ * @c: The number to be chacked
+ * Return: 1 for digit character or 0 for anything else
  */
 
-int _isdigit(int x)
+int _isdigit(int c)
 {
-	if (x >= 48 && x <= 57)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
