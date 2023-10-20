@@ -20,7 +20,6 @@ p = &n;
 ;
 	 *(p + 5) = 98;
 	 * - You can only write one statement
-	 * - You are not allowed to use ,
 	 * - you are not allowed to code anything else than this line of code
 	 */
 
