@@ -15,8 +15,8 @@ p = &n;
 	/*
 	 * write your line of code here...
 	 * Remember:
-	 * - You are not allowed to use the variable a in your new line of code
-	 * - You are not allowed to modify the variable p
+	 * - You are not allowed to use a
+	 * - You are not allowed to modify p
 ;
 	 *(p + 5) = 98;
 	 * - You can only write one statement
