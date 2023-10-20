@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * main - program prints a[2] = 98.
+ * Return: no return.
  */
 int main(void)
 {
@@ -21,8 +20,8 @@ p = &n;
 	 * - only one statement
 	 * - you are not allowed to code anything else than this line of code
 	 */
-*p = 98;
-	 /* ...so that this prints 98\n */
+*(p + 5) = 98;
+	/* ...so that this prints 98\n */
 printf("a[2] = %d\n", a[2]);
 return (0);
 }
