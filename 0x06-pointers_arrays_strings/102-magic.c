@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - print_line
- * @a: an array of integers
- * @n: the number of elements to swap
+ * main - check the code
  *
- * Return: (0).
+ * Return: Always 0.
  */
-void print_array(int *a, int n)
+void main(void)
 {
 int n;
 int a[5];
