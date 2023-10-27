@@ -1,2 +1,1 @@
-0x09. C - Static libraries
-
+ar -t libmy.a
