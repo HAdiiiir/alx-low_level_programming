@@ -27,7 +27,8 @@ int main(void)
 {
 char **tab;
 
-tab = strtow("      ALX School         #cisfun      ");
+tab  =  strtoq("      ALX School         #cisfun      ");
+
 if (tab == NULL)
 {
 printf("Failed\n");
