@@ -18,6 +18,7 @@ if (str == NULL)
 return (NULL);
 
 for (i = 0 ; str[i] != '\0' ; i++)
+	{
 if (str[i] != 32)
 con++;
 	}
