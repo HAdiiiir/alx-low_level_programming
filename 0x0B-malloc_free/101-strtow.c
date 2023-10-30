@@ -30,7 +30,7 @@ return (num);
  * @words: pointer values being passed for freeing
  * @b: counter
  */
-int free_everything(char **words, int b)
+free_everything(char **words, int b)
 {
 for (; b > 0; b--)
 free(words[b]);
