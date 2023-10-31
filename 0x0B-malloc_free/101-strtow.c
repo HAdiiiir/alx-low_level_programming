@@ -36,7 +36,6 @@ for (; i > 0;)
 free(string[--i]);
 free(string);
 }
-
 /**
  * strtow - function that splits string into words
  * @str: string being passed
@@ -80,6 +79,8 @@ found_word++;
 c++;
 			}
 words[b][c] = '\0';
+b++;
+c = 0; length = 0; str++;
 		}
 	}
 return (words);
