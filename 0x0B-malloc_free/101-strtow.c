@@ -79,8 +79,8 @@ char **strtow(char *str)
 				found_word++;
 				c++;
 			}
-			words[b][c] = '\0';
 			b++;
+			length = 0;
 		}
 	}
 	return (words);
