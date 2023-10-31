@@ -80,7 +80,7 @@ char **strtow(char *str)
 				c++;
 			}
 b++;
-c++; length = 0; str--;
+c++; length = 0; str++;
 		}
 	}
 	return (words);
