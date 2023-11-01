@@ -55,7 +55,7 @@ char **strtow(char *str)
 	if (words == 0)
 		return (NULL);
 	for (; *str != '\0' &&  b < total_words;)
-	{
+
 		if (*str == ' ')
 			str++;
 		else
@@ -63,8 +63,10 @@ char **strtow(char *str)
 			found_word = str;
 			for (; *str != ' ' && *str != '\0';)
 			{
-				length++;
+				b++;
+				length = 0;
 				str++;
+				c = 0;
 			}
 			words[b] = malloc((length + 1) * sizeof(char));
 			if (words[b] == 0)
@@ -79,8 +81,6 @@ char **strtow(char *str)
 				c++;
 			}
 			words[b][c] = '\0';
-			b++; c = 0; length = 0; str++;
 		}
-	}
 	return (words);
 }
