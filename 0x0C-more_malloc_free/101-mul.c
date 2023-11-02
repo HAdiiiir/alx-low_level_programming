@@ -64,5 +64,5 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	return (0);
+return (0);
 }
