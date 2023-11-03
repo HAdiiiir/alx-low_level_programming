@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int _putchar(char c);
+void _putchar(char *str, int l)
 	{
 	return (write(1, &c, 1));
 }
