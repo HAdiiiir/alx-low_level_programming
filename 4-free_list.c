@@ -1,20 +1,33 @@
-#include "lists.h"
+#include <stdlib.h>
+#include "your_list_header.h" // Replace with the actual header file for your list_t structure
 
 /**
- * free_listint - function with one argument
- * @head: pointer to node
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @next: points to the next node
  *
- * Description: frees a list
- * Return: void
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-void free_listint(listint_t *head)
+typedef struct list_s
 {
-    listint_t *traverse;
+    char *str;
+    struct list_s *next;
+} list_t;
 
-    while (head)
+/**
+ * free_list - Frees a list_t list.
+ * @head: A pointer to the head of the list_t list.
+ */
+void free_list(list_t *head)
+{
+    list_t *temp;
+
+    while (head != NULL)
     {
-        traverse = head->next;
-        free(head);
-        head = traverse;
+        temp = head;
+        head = head->next;
+        free(temp->str); // Free the duplicated string
+        free(temp);      // Free the node
     }
 }

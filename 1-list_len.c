@@ -1,21 +1,35 @@
-#include "lists.h"
+#include <stddef.h>
+#include "your_list_header.h" // Replace with the actual header file for your list_t structure
 
 /**
- * listint_len - function with one argument
- * @h: pointer to a struct of linked list
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @next: points to the next node
  *
- * Description: returns the number of elements in a linked list
- * Return: number of elements
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-size_t listint_len(const listint_t *h)
+typedef struct list_s
 {
-    unsigned int count = 0;
+    char *str;
+    struct list_s *next;
+} list_t;
+
+/**
+ * list_len - Returns the number of elements in a list_t list.
+ * @h: A pointer to the head of the list_t list.
+ *
+ * Return: The number of elements in the list.
+ */
+size_t list_len(const list_t *h)
+{
+    size_t count = 0;
 
     while (h != NULL)
     {
-        h = h->next;
         count++;
+        h = h->next;
     }
-    return (count);
+
+    return count;
 }
-ls

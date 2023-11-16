@@ -1,32 +1,62 @@
-#include "lists.h"
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+#include "your_list_header.h" // Replace with the actual header file for your list_t structure
 
 /**
- * add_nodeint_end - function with two arguments
- * @head: double pointer to head of first linked list
- * @n: integer value of data in node
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @next: points to the next node
  *
- * Description: add a new node at the end of linked list
- * Return: address of new element
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-listint_t *add_nodeint_end(listint_t **head, const int n)
+typedef struct list_s
 {
-    listint_t *temp, *cursor;
+    char *str;
+    struct list_s *next;
+} list_t;
 
-    temp = malloc(sizeof(listint_t));
-    if (temp == NULL)
-        return (NULL);
+/**
+ * add_node_end - Adds a new node at the end of a list_t list.
+ * @head: A pointer to a pointer to the head of the list_t list.
+ * @str: The string to be duplicated and added to the new node.
+ *
+ * Return: The address of the new element, or NULL if it failed.
+ */
+list_t *add_node_end(list_t **head, const char *str)
+{
+    list_t *new_node, *temp;
 
-    temp->next = NULL;
-    temp->n = n;
+    if (str == NULL)
+        return NULL;
 
-    if (*head)
+    new_node = malloc(sizeof(list_t));
+    if (new_node == NULL)
+        return NULL;
+
+    new_node->str = strdup(str);
+    if (new_node->str == NULL)
     {
-        cursor = *head;
-        while (cursor->next != NULL)
-            cursor = cursor->next;
-        cursor->next = temp;
+        free(new_node);
+        return NULL;
+    }
+
+    new_node->next = NULL;
+
+    if (*head == NULL)
+    {
+        *head = new_node;
     }
     else
-        *head = temp;
-    return (temp);
+    {
+        temp = *head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = new_node;
+    }
+
+    return new_node;
 }
