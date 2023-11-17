@@ -1,21 +1,30 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
- * listint_len - function with one argument
- * @h: pointer to a struct of linked list
+ * add_node - adds a new node at the beginning of a linked list
+ * @head: double pointer to the list_t list
+ * @str: new string to add in the node
  *
- * Description: returns the number of elements in a linked list
- * Return: number of elements
+ * Return: the address of the new element, or NULL if it fails
  */
-size_t listint_len(const listint_t *h)
+list_t *add_node(list_t **head, const char *str)
 {
-    unsigned int count = 0;
+	list_t *new;
+	unsigned int len = 0;
 
-    while (h != NULL)
-    {
-        h = h->next;
-        count++;
-    }
-    return (count);
+	while (str[len])
+		len++;
+
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
+
+	new->str = strdup(str);
+	new->len = len;
+	new->next = (*head);
+	(*head) = new;
+
+	return (*head);
 }
-ls
