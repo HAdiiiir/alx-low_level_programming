@@ -1,23 +1,39 @@
-#include <stdio.h>
-#include "sort.h"
+#include "lists.h"
 
 /**
- * print_list - Prints a list of integers
+ * _strlen - returns the length of a string
+ * @s: the string whose length to check
  *
- * @list: The list to be printed
+ * Return: integer length of string
  */
-void print_list(const listint_t *list)
+int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (list)
+	if (!s)
+
+		return (0);
+
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
+ * print_list - prints a linked lists
+ * @h: pointer to first node
+ *
+ * Return: size of list
+ */
+size_t print_list(const list_t *h)
+{
+	size_t i = 0;
+
+	while (h)
 	{
-		if (i > 0)
-			printf(", ");
-		printf("%d", list->n);
-		++i;
-		list = list->next;
+		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		h = h->next;
+		i++;
 	}
-	printf("\n");
+	return (i);
 }
